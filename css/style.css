@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1600px;
+  padding: 20px 15px;
+  margin: 0 auto;
+}
+
+tr {
+  cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.add-student,
+.filter-student {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn-add,
+.btn-clear,
+.btn-delete {
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.add-student>.mb-3 {
+  width: 30%;
+}
+
+.filter-student>.mb-3 {
+  width: 30%;
+}
+
+.clicked {
+  outline: 2px solid rgb(2, 41, 4);
+  outline-offset: -1px;
+}

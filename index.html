@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+  <script defer src="./main.js"></script>
+  <title>Students</title>
+</head>
+<body>
+<section class="main">
+  <div class="container">
+    <h1>Student database</h1>
+    <hr>
+    <h3>Add new student</h3>
+    <form class="add-student" action="#" id="add-student">
+      <div class="mb-3">
+        <input class="form-control form-control-lg" type="text" placeholder="Name" id="inp-name" title="Latin letters only. No white space, numbers, symbols are allowed">
+      </div>
+      <div class="mb-3">
+        <input class="form-control form-control-lg" type="text" placeholder="Surname" id="inp-surname" title="Latin letters only. No white space, numbers, symbols are allowed">
+      </div>
+      <div class="mb-3">
+        <input class="form-control form-control-lg" type="text" placeholder="Patronical Name" id="inp-patronName" title="Latin letters only. No white space, numbers, symbols are allowed">
+      </div>
+      <div class="mb-3">
+        <select class="form-control form-control-lg" id="select-faculty">
+          <option value="Gryffindor">House of Gryffindor</option>
+          <option value="Slytherin">House of Slytherin</option>
+          <option value="Ravenclaw">House of Ravenclaw</option>
+          <option value="Hufflepuff">House of Hufflepuff</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <input class="form-control form-control-lg" type="number" placeholder="Year of enrollment" id="inp-yearEnroll">
+      </div>
+      <div class="mb-3">
+        <input class="form-control form-control-lg" type="date" id="inp-birthdate">
+      </div>
+        <button class="btn-add btn btn-primary">Add</button>
+    </form>
+    <hr>
+    <h3>Filter</h3>
+    <form class="filter-student" action="#">
+      <div class="mb-3">
+        <input class="form-control form-control-lg inp-filter" id="full-name-filter" type="text" placeholder="Full name">
+      </div>
+      <div class="mb-3">
+        <select class="form-control form-control-lg inp-filter" id="faculty">
+          <option value="">House</option>
+          <option value="Gryffindor">Gryffindor</option>
+          <option value="Slytherin">Slytherin</option>
+          <option value="Ravenclaw">Ravenclaw</option>
+          <option value="Hufflepuff">Hufflepuff</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <input class="form-control form-control-lg inp-filter" id="year-enroll" type="number" placeholder="Year of enrollment">
+      </div>
+      <div class="mb-3">
+        <input class="form-control form-control-lg inp-filter" id="year-grad" type="number" placeholder="Year of graduation">
+      </div>
+      <button class="btn-clear btn btn-primary">Clear</button>
+      <button class="btn-delete btn btn-primary">Delete</button>
+    </form>
+    <table class="table table-success table-striped students-table">
+      <tr class="header">
+        <th data-column = "fullName">Full Name</th>
+        <th data-column = "faculty">House</th>
+        <th data-column = "birthDate">Birthday Date (age)</th>
+        <th data-column = "studingPeriod">Years of Studing</th>
+      </tr>
+      <tbody id="students-list"></tbody>
+    </table>
+  </div>
+</section>
+</body>
+</html>
